@@ -1,4 +1,4 @@
-This program is a Memory Map Generator.
+# MemoryMapGenerator_Fall2023_OS
 
 This program was created for a Fundamentals of Operating Systems course to practice understanding of memory map tables.
 
