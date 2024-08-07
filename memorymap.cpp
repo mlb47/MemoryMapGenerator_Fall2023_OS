@@ -1,17 +1,16 @@
-//Written by Miles Brown
+//Written by Miles Brown, Fall 2023
+
 #include "memorymap.hpp"
 #include <iostream>
 #include <iomanip>
 using namespace std;
 
-//Constructor
 MemoryMap::MemoryMap(){
     pair.base = 0;
     pair.limit = 0;
     baseLimits.push_back(pair);
 }
 
-//Destructor
 MemoryMap::~MemoryMap(){
     for(auto& e : baseLimits)
         baseLimits.pop_back();
@@ -30,7 +29,6 @@ void MemoryMap::PrintTable(){
     cout << "Table of unused memory: " << endl;
     cout << "------------------------------------" << endl;
     cout << "Base Register    -    Limit Register" << endl;
-    //for loop that goes through array values
     for(int i = 1; i < baseLimits.size(); ++i){
         cout << left << setw(22) << baseLimits.at(i).base << baseLimits.at(i).limit << endl;
     }
